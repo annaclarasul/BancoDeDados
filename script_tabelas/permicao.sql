@@ -1,0 +1,10 @@
+CREATE USER 'secretaria'@'localhost' IDENTIFIED BY '124715';
+GRANT ALL PRIVILEGES ON *.* TO 'secretaria'@'localhost';
+FLUSH PRIVILEGES;
+CREATE USER 'professor'@'localhost' IDENTIFIED BY '67890';
+GRANT SELECT, INSERT, DELETE, CREATE, UPDATE ON *.* TO 'professor'@'localhost';
+FLUSH PRIVILEGES;
+CREATE USER 'aluno'@'localhost' IDENTIFIED BY '12345';
+GRANT CREATE, INSERT, SELECT ON *.* TO 'aluno'@'localhost';
+FLUSH PRIVILEGES;
+SELECT * FROM mysql.user;
